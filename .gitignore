@@ -1,6 +1,5 @@
 venv/*
 env/*
-*/settings.py
 */migrations/*
 media/*
 static/webpack/node_modules/*
