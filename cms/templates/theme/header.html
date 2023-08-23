@@ -1,0 +1,27 @@
+<nav class="cot-navbar navbar navbar-expand-lg bg-body-tertiary"> 
+    <div class="cot-container container">
+      <div class="tucsonaz-site-logo navbar-brand">
+        <div class="site-logo">
+          <a href="/" class="site-logo-link">
+            <span class="visuallyhidden">City of Tucson</span>
+          </a>
+        </div>
+      </div>          
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse cot-navbar-wrapper" id="navbarSupportedContent">
+        <div class="cot-navbar-nav-wrapper">
+          <ul class="navbar-nav container justify-content-end mb-2 mb-lg-0">
+              {% include "theme/links.html" %} 
+          </ul>
+        </div>
+        <form action="https://beta.tucsonaz.gov/Content-search#main-content" method="get" class="d-flex cot-search-wrapper" accept-charset="UTF-8" role="search">
+          <input class="form-control me-2 cot-search-box" name="keyword" type="search" placeholder="Search tucsonaz.gov" aria-label="Search tucsonaz.gov">
+          <button class="btn btn-outline-success cot-search-button" type="submit">Search</button>
+        </form>
+      </div>
+    </div> 
+</nav>

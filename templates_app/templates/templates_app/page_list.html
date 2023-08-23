@@ -1,0 +1,16 @@
+<!-- templates_app/templates/templates_app/page_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page List</title>
+</head>
+<body>
+    <ul>
+        {% for page in pages %}
+        <li><a href="{% url 'page_detail' page.id %}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

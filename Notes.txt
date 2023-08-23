@@ -1,0 +1,13 @@
+########## Mental Notes ##########
+-- I'm thinking about creating a cms closely replicating OpenCities, except way better functionality
+---- Database Models ----
+-- Have the option to integrate ldap, or use django auth
+-- Will new pages have their own db tables or would django create the content behind the scenes and add it to the apps?
+-- workflows
+-- administration
+-- templates
+-- roles (granularity)
+
+---- Project/App Content ----
+-- a bundle of templates which the users can choose from (will be wrapped into a base.html) (perhaps bootstrap themed)
+-- will the urls be created and added to the app urls file or added to the database

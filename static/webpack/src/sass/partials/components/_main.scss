@@ -1,0 +1,93 @@
+html {
+  font-size: ($base-font-size/16) * 100%;
+  line-height: 1.4;
+}
+
+body {
+  @extend %body-font;
+  color: $c-black;
+  background-color: $c-white;
+}
+
+*:focus {
+  outline: dotted 2px $c-black; 
+}
+
+main {
+  @extend .container;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  @extend %heading-font; 
+  margin: 0;
+}
+
+h1 {
+  @include fontsize(50); 
+  font-weight: 400;
+  color: $c-innovation-blue;
+}
+
+h2 {
+  @include fontsize(35);
+  font-weight: 800;
+  color: $c-sunset-orange;
+  text-transform: uppercase;
+}
+
+h3 {
+  @include fontsize(30);
+  font-weight: 400;
+  color: $c-black;
+}
+
+h4 {
+  @include fontsize(25);
+  font-weight: 400;
+  color: $c-black;
+}
+
+h5 {
+  @include fontsize(20);
+  font-weight: 600;
+  color: $c-innovation-blue;
+}
+
+h6 {
+  @include fontsize(20); 
+  font-weight: 900;
+  color: $c-sunset-orange-dark;
+  text-transform: uppercase;
+}
+
+*:focus {
+  outline: dotted 2px $c-black;
+}
+
+a {
+  color: $c-black;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $c-black;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: dotted 2px $c-black;
+  }
+}
+
+a.dark {
+  color: $c-sunset-orange;
+  text-decoration: none;
+  &:hover, 
+  &:focus {
+    color: $c-sunset-orange-dark;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: dotted 2px $c-white;
+  }
+}

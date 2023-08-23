@@ -1,0 +1,94 @@
+// Colors
+$c-black: #000000;
+$c-white: #ffffff;
+
+// Innovation Blue
+$c-innovation-blue-dark: #001842;
+$c-innovation-blue: #002669;
+$c-innovation-blue-light: #AFB8D0;
+
+// Monsoon Grey
+$c-monsoon-grey-dark: #D2D2CB;
+$c-monsoon-grey: #E1E2DD;
+$c-monsoon-grey-light: #F3F3F2;
+
+// Sunset Orange
+$c-sunset-orange-dark: #762709;
+$c-sunset-orange: #993300;
+
+// Sonora Sand
+$c-sonora-sand: #E5D086;
+$c-sonora-sand-light: #F3EAC8;
+
+// Gradients
+// Innovation Blue Gradient
+%innovation-blue-gradient { 
+    background: linear-gradient(90deg, #001842, #002669);
+}
+.bg-c-innovation-blue-gradient {
+    @extend %innovation-blue-gradient;
+}
+// Sonora Sand Gradient
+%sonora-sand-gradient {
+    background: linear-gradient(90deg, #E5D086, #F3EAC8);
+}
+.bg-c-sonora-sand-gradient {
+    @extend %sonora-sand-gradient;
+}
+
+// Accent Colors
+$c-sun-yellow: #FFDB22;
+$c-saguaro-green: #83AC16;
+$c-saguaro-green-light: #C1D58A;
+$c-saguaro-green-dark: #22774D;
+$c-sunset-orange-light: #FF7429;
+
+// Social Media Colors
+$c-facebook-blue: #3b5998;
+$c-twitter-blue: #1da1f2;
+$c-youtube-red: #ff0000;
+$c-instagram-magenta: #c32aa3;
+$c-tiktok-black: #010101;
+$c-nextdoor-lime: #8ED500;
+$c-email-orange: #FF7429;
+
+// Base Font Size
+$base-font-size: 16;
+
+// Define the icon font name
+$c-font-name: 'cot-icons';
+
+// The max-width of the stage on full desktop in pixels (see mixin stagecenter)
+$max-stage-width: 1140; 
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1135px,
+  xxl: 1140px
+);
+
+$theme-colors: ( 
+  "primary": $c-innovation-blue,
+  "secondary": $c-sunset-orange,
+  "success": $c-saguaro-green,
+  "danger": $c-sunset-orange-dark,
+  "warning": $c-sonora-sand,
+  "info": $c-innovation-blue-light,
+  "c-black": $c-black,
+  "c-white": $c-white,
+  "c-innovation-blue-dark": $c-innovation-blue-dark,
+  "c-innovation-blue": $c-innovation-blue,
+  "c-innovation-blue-light": $c-innovation-blue-light,
+  "c-monsoon-grey-dark": $c-monsoon-grey-dark,
+  "c-monsoon-grey": $c-monsoon-grey,
+  "c-monsoon-grey-light": $c-monsoon-grey-light,
+  "c-sunset-orange-dark": $c-sunset-orange-dark,
+  "c-sunset-orange": $c-sunset-orange,
+  "c-sonora-sand": $c-sonora-sand,
+  "c-sonora-sand-light": $c-sonora-sand-light,
+  "c-sun-yellow": $c-sun-yellow,
+  "c-saguaro-green": $c-saguaro-green,
+  "c-sunset-orange-light": $c-sunset-orange-light,
+);
