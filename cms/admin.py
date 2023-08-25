@@ -10,6 +10,14 @@ admin.site.register(Comment)
 
 @admin.register(Page)
 class PageAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at', 'updated_at')
-    list_filter = ('created_at', 'updated_at')
-    search_fields = ('title', 'content')
+    fieldsets = [
+        (
+            None,
+            {
+                "classes": ["wide", "extrapretty"],
+                "fields": ["title", "url"],
+            },
+        ),
+    ]
+    readonly_fields = ["created_at", "updated_at"]
+    prepopulated_fields = {"url": ("title", )}

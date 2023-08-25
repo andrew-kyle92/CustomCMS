@@ -8,8 +8,17 @@ from rest_framework.permissions import IsAuthenticated
 
 
 # Create your views here.
-def page_detail(request, page_id):
-    page = Page.objects.get(pk=page_id)
+def home_page(request):
+    page = Page.objects.get(url="home")
+    template = 'templates_app/home.html'
+    context = {
+        'page': page,
+    }
+    return render(request, template, context)
+
+
+def page_detail(request, url):
+    page = Page.objects.get(url=url)
     template = 'templates_app/page_detail.html'
     context = {
         'page': page,

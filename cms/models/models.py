@@ -1,18 +1,32 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 from ckeditor.fields import RichTextField
 
 # Create your models here.
 
 
+class CacheTable(models.Model):
+    cache_key = models.CharField(max_length=100, null=False)
+    value = models.TextField(max_length=255, null=False)
+    expires = models.DateTimeField('date', null=False)
+
+
 class Page(models.Model):
     title = models.CharField(max_length=200)
+    url = models.SlugField(unique=True,)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        if self.url == "home":
+            return reverse("index")
+        else:
+            return reverse("page_detail", kwargs={"url": self.url})
 
 
 class Media(models.Model):
