@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from django.conf import settings
 
 from rest_framework import generics
 from .models.models import Page, Tag, Media, Comment
 from .serializers import PageSerializers, TagSerializers, MediaSerializers, CommentSerializers
+
+from core.utils.functions import get_pages
 
 from rest_framework.permissions import IsAuthenticated
 
@@ -10,9 +13,11 @@ from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 def home_page(request):
     page = Page.objects.get(url="home")
-    template = 'templates_app/home.html'
+    template = 'theme/index.html'
+    pages = get_pages()
     context = {
         'page': page,
+        'pages': pages,
     }
     return render(request, template, context)
 
@@ -20,8 +25,10 @@ def home_page(request):
 def page_detail(request, url):
     page = Page.objects.get(url=url)
     template = 'templates_app/page_detail.html'
+    pages = get_pages()
     context = {
         'page': page,
+        'pages': pages,
     }
     return render(request, template, context)
 

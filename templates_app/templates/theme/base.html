@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Website</title>
+
+    {# fontawesome kit #}
+    <script src="https://kit.fontawesome.com/4a75a4df45.js" crossorigin="anonymous"></script>
+
+    {# css/js #}
+    <script src="{% static 'cms/js/main.bundle.js' %}"></script>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    {% include 'theme/admin-toolbar.html' %}
+    {% endif %}
+
+    {% include "theme/header.html" %}
+
+    {% block content %}{% endblock %}
+</body>
+</html>

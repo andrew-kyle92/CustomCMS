@@ -5,7 +5,7 @@ from django.urls import re_path, path
 from . import views
 
 urlpatterns = [
-    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^django-admin/', admin.site.urls),
     path('page/<slug:url>/', views.page_detail, name='page_detail'),
     path('', views.home_page, name='index'),
     re_path(r'^api/pages/', views.PageList.as_view(), name='page-list'),
